@@ -1,6 +1,6 @@
-package Demo;
+package mao;
 
-import domain.Location;
+import mao.domain.Location;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
