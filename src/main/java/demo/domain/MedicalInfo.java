@@ -1,13 +1,10 @@
-package mao.domain;
+package demo.domain;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
 
 import javax.persistence.Embeddable;
 
-/**
- * Medical Information class
- * */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @Data
 @Embeddable
@@ -25,4 +22,5 @@ public class MedicalInfo {
         this.bfr = bfr;
         this.fmi = fmi;
     }
+
 }

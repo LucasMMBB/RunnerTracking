@@ -1,22 +1,19 @@
-package mao.service.impl;
+package demo.service.impl;
 
-import mao.domain.Location;
-import mao.domain.LocationRepository;
-import mao.service.LocationService;
+import demo.domain.Location;
+import demo.service.LocationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import demo.domain.LocationRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-/**
- * LocationServiceImpl
- * Dependency Injection
- * */
-
+@Service
 public class LocationServiceImpl implements LocationService {
 
-    private  LocationRepository locationRepository;
+    private LocationRepository locationRepository;
 
     @Autowired
     public LocationServiceImpl(LocationRepository locationRepository){
@@ -39,7 +36,7 @@ public class LocationServiceImpl implements LocationService {
     }
 
     @Override
-    public Page<Location> findeByRunningId(String runningId, Pageable pageable) {
-        return locationRepository.findByUnitInfoforRunningId(runningId, pageable);
+    public Page<Location> findByRunningId(String runningId, Pageable pageable) {
+        return locationRepository.findByUnitInfoRunningId(runningId, pageable);
     }
 }
